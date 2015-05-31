@@ -1,8 +1,3 @@
-/**
- * Author: Umayr Shahid <umayrr@hotmail.com>,
- * Created: 5:21 AM, 27/05/15.
- */
-
 'use strict';
 
 var Sequelize = require('sequelize');

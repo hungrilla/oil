@@ -1,8 +1,3 @@
-/**
- * Author: Umayr Shahid <umayrr@hotmail.com>,
- * Created: 5:41 AM, 27/05/15.
- */
-
 'use strict';
 
 var model = require('../models/restaurant');
