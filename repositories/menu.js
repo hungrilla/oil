@@ -1,6 +1,6 @@
 'use strict';
 
-var model = require('../models/restaurant');
+var model = require('../models/menu');
 
 module.exports = {
   sync: sync,
@@ -38,10 +38,12 @@ function drop() {
 function insert(obj) {
   return this.sync().then(function () {
     return model.create({
-      url: obj.url,
+      restaurantId: obj.restaurantId,
       type: obj.type,
       name: obj.name,
-      rating: parseInt(obj.rating)
+      description: obj.description,
+      serves: obj.serves,
+      price: obj.price
     });
   });
 }
