@@ -3,9 +3,9 @@
 var model = require('../models/restaurant');
 
 module.exports = {
-    sync: sync,
-    drop: drop,
-    insert: insert
+  sync: sync,
+  drop: drop,
+  insert: insert
 };
 
 /**
@@ -15,9 +15,9 @@ module.exports = {
  * @returns {*|Promise}
  */
 function sync(isForced) {
-    isForced = isForced || false;
+  isForced = isForced || false;
 
-    return model.sync({force: isForced});
+  return model.sync({force: isForced});
 }
 
 /**
@@ -26,7 +26,7 @@ function sync(isForced) {
  * @returns {*|Promise}
  */
 function drop() {
-    return model.drop();
+  return model.drop();
 }
 
 /**
@@ -36,12 +36,12 @@ function drop() {
  * @returns {*|Promise}
  */
 function insert(obj) {
-    return this.sync().then(function () {
-        return model.create({
-            url: obj.url,
-            type: obj.type,
-            name: obj.name,
-            rating: parseInt(obj.rating)
-        });
+  return this.sync().then(function () {
+    return model.create({
+      url: obj.url,
+      type: obj.type,
+      name: obj.name,
+      rating: parseInt(obj.rating)
     });
+  });
 }
