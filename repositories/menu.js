@@ -36,7 +36,7 @@ function drop() {
  * @returns {*|Promise}
  */
 function insert(obj) {
-  return this.sync().then(function () {
+  return sync().then(function () {
     return model.create({
       restaurantId: obj.restaurantId,
       type: obj.type,
