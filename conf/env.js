@@ -7,12 +7,13 @@
 
 var environments = {
     dev: {
-        db: {
-            host: 'localhost',
-            name: 'hungrilla',
-            user: 'root',
-            password: ''
-        }
+      db: {
+        host: 'localhost',
+        name: 'hungrilla',
+        user: 'root',
+        password: ''
+      },
+      port: process.env.PORT || 3000
     }
 };
 
