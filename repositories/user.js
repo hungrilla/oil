@@ -4,7 +4,7 @@ var model = require('../models/user');
 
 module.exports = {
   findOrCreate: findOrCreate
-}
+};
 
 /**
  * Finds or creates a new user.
@@ -19,5 +19,5 @@ function findOrCreate(user){
   var defaults = {
     defaults: user
   };
-  return User.findOrCreate(where, defaults);
-};
+  return model.findOrCreate(where, defaults);
+}

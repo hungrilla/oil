@@ -12,13 +12,15 @@ var db = require('./env')[env].db;
 module.exports = sequelize;
 
 function sequelize() {
-    return new Sequelize(db.name, db.user, db.password, {
-        host: db.host,
-        dialect: 'mysql',
-        pool: {
-            max: 5,
-            min: 0,
-            idle: 10000
-        }
-    });
+  return new Sequelize(db.name, db.user, db.password, {
+    host: db.host,
+    dialect: 'mysql',
+    logging: false,
+    maxConcurrentQueries: 100,
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000
+    }
+  });
 }
