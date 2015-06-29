@@ -13,7 +13,7 @@ var environments = {
       user: process.env['db_user'] || 'root',
       password: process.env['db_password'] || ''
     },
-    port: process.env['port'] || 3000
+    port: process.env['PORT'] || 3000
   },
   staging: {
     db: {
@@ -22,7 +22,7 @@ var environments = {
       user: process.env['db_user'] || 'root',
       password: process.env['db_password'] || ''
     },
-    port: process.env['port'] || 3000
+    port: process.env['PORT'] || 3000
   }
 };
 
