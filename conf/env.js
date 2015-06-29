@@ -6,15 +6,24 @@
 'use strict';
 
 var environments = {
-    dev: {
-      db: {
-        host: 'localhost',
-        name: 'hungrilla',
-        user: 'root',
-        password: ''
-      },
-      port: process.env.PORT || 3000
-    }
+  dev: {
+    db: {
+      host: process.env['db_host'] || 'localhost',
+      name: process.env['db_name'] || 'hungrilla',
+      user: process.env['db_user'] || 'root',
+      password: process.env['db_password'] || ''
+    },
+    port: process.env['port'] || 3000
+  },
+  staging: {
+    db: {
+      host: process.env['db_host'] || 'localhost',
+      name: process.env['db_name'] || 'hungrilla',
+      user: process.env['db_user'] || 'root',
+      password: process.env['db_password'] || ''
+    },
+    port: process.env['port'] || 3000
+  }
 };
 
 module.exports = environments;
