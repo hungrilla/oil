@@ -14,6 +14,9 @@ module.exports = sequelize.define('restaurant', {
         allowNull: false,
         unique: true
     },
+    img: {
+        type: Sequelize.STRING(255)
+    },
     name: {
         type: Sequelize.STRING(255),
         allowNull: false
