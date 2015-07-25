@@ -39,6 +39,7 @@ function insert(obj) {
   return sync().then(function () {
     return model.create({
       url: obj.url,
+      img: obj.img,
       type: obj.type,
       name: obj.name,
       rating: parseInt(obj.rating)
