@@ -11,13 +11,13 @@ var Serving = sequelize.define('serving', {
     defaultValue: Sequelize.UUIDV4
   },
   pristinePrice:{
-    type: Sequelize.STRING(255)
+    type: Sequelize.TEXT('medium')
   },
   price: {
     type: Sequelize.INTEGER
   },
   pristineServes: {
-    type: Sequelize.STRING(255)
+    type: Sequelize.TEXT('medium')
   },
   serves: {
     type: Sequelize.INTEGER

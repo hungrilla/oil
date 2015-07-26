@@ -27,11 +27,5 @@ module.exports = sequelize.define('menu', {
   },
   type: {
     type: Sequelize.STRING(255)
-  },
-  serves: {
-    type: Sequelize.STRING(255)
-  },
-  price: {
-    type: Sequelize.STRING(255)
   }
 });

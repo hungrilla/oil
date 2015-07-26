@@ -41,9 +41,7 @@ function insert(obj) {
       restaurantId: obj.restaurantId,
       type: obj.type,
       name: obj.name,
-      description: obj.description,
-      serves: obj.serves,
-      price: obj.price
+      description: obj.description
     });
   });
 }
